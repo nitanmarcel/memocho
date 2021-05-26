@@ -31,7 +31,7 @@ module.exports = (m, {
                         href: "?raw=true"
                     },
                     [
-                        "View Raw", m("span.keyboard-shortcut", [": Ctrl + Alt + R"])
+                        "Raw", m("span.keyboard-shortcut", [": Ctrl + Alt + R"])
                     ],
                 ),
             ] :
@@ -39,7 +39,7 @@ module.exports = (m, {
             " "
         ),
         m("a#name-label", {
-            href: "https://github.com/mojurasu/memocho",
+            href: "https://github.com/nitanmmarcel/memocho",
             target: "blank",
             rel: "noopener"
         }, " Memochō"),
@@ -62,15 +62,6 @@ module.exports = (m, {
                     rel: "noopener"
                 },
                 "@SitiSchu"
-            ),
-            ", Stolen by",
-            m(
-                "a", {
-                    href: "https://github.com/nitanmarcel/",
-                    target: "blank",
-                    rel: "noopener"
-                },
-                "@nitanmarcel"
             ),
             "",
             m(
