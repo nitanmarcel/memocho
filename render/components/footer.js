@@ -51,11 +51,21 @@ module.exports = (m, {isSnippet}) => {
                 },
                 "@SitiSchu"
             ),
+            ", Stolen by",
+            m(
+                "a",
+                {
+                    href: "https://github.com/nitanmarcel/",
+                    target: "blank",
+                    rel: "noopener"
+                },
+                "@nitanmarcel"
+            ),
             "",
             m(
                 "a",
                 {
-                    href: "https://github.com/mojurasu/memocho",
+                    href: "https://github.com/nitanmarcel/memocho",
                     target: "blank",
                     rel: "noopener"
                 },
