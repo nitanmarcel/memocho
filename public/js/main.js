@@ -68,6 +68,11 @@ function handleKeybindings(e) {
                 e.preventDefault();
                 return document.getElementById('newButton').click();
             }
+	    
+       	    if (e.key === "r") {
+		e.preventDefault();
+		return document.getElementById('rawButton').click();
+            }
 
             if (e.key === "f") {
                 // Ctrl + Alt + F -> Fork

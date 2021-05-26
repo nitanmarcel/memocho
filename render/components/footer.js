@@ -22,7 +22,17 @@ module.exports = (m, {isSnippet}) => {
                     ? ["Fork", m("span.keyboard-shortcut", [": Ctrl + Alt + F"])]
                     : ["Save", m("span.keyboard-shortcut", [": Ctrl + S"])],
             ),
-            " ",
+	    isSnippet
+	     ? ["  ",
+               m(
+                   "a#rawButton.submit",
+                   {href: "?raw=true"},
+                   [
+                       "View Raw", m("span.keyboard-shortcut", [": Ctrl + Alt + R"])
+                   ],
+               ),]
+	    : [""],
+            " "
         ),
         m("a#name-label", {
             href: "https://github.com/mojurasu/memocho",
