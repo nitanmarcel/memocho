@@ -1,37 +1,41 @@
-module.exports = (m, {isSnippet}) => {
+module.exports = (m, {
+    isSnippet
+}) => {
     return m("footer", [
         m("div.footer-keybindings",
             m(
-                "a#newButton.submit",
-                {href: "/"},
+                "a#newButton.submit", {
+                    href: "/"
+                },
                 [
                     "New Snippet", m("span.keyboard-shortcut", [": Ctrl + Alt + A"])
                 ],
             ),
             "  ",
             m(
-                "button#actionButton.submit",
-                {
+                "button#actionButton.submit", {
                     type: "submit",
                     formaction: isSnippet ? "fork" : "/",
                     formenctype: "application/x-www-form-urlencoded",
                     formmethod: "post",
                     form: "codeSnippet",
                 },
-                isSnippet
-                    ? ["Fork", m("span.keyboard-shortcut", [": Ctrl + Alt + F"])]
-                    : ["Save", m("span.keyboard-shortcut", [": Ctrl + S"])],
+                isSnippet ?
+                ["Fork", m("span.keyboard-shortcut", [": Ctrl + Alt + F"])] :
+                ["Save", m("span.keyboard-shortcut", [": Ctrl + S"])],
             ),
-	    isSnippet
-	     ? ["  ",
-               m(
-                   "a#rawButton.submit",
-                   {href: "?raw=true"},
-                   [
-                       "View Raw", m("span.keyboard-shortcut", [": Ctrl + Alt + R"])
-                   ],
-               ),]
-	    : [""],
+            isSnippet ?
+            ["  ",
+                m(
+                    "a#rawButton.submit", {
+                        href: "?raw=true"
+                    },
+                    [
+                        "View Raw", m("span.keyboard-shortcut", [": Ctrl + Alt + R"])
+                    ],
+                ),
+            ] :
+            [""],
             " "
         ),
         m("a#name-label", {
@@ -43,8 +47,7 @@ module.exports = (m, {isSnippet}) => {
         m("code.footer-text", [
             " Built by",
             m(
-                "a",
-                {
+                "a", {
                     href: "https://github.com/MKRhere",
                     target: "blank",
                     rel: "noopener"
@@ -53,8 +56,7 @@ module.exports = (m, {isSnippet}) => {
             ),
             ", Modified by",
             m(
-                "a",
-                {
+                "a", {
                     href: "https://github.com/SitiSchu",
                     target: "blank",
                     rel: "noopener"
@@ -63,8 +65,7 @@ module.exports = (m, {isSnippet}) => {
             ),
             ", Stolen by",
             m(
-                "a",
-                {
+                "a", {
                     href: "https://github.com/nitanmarcel/",
                     target: "blank",
                     rel: "noopener"
@@ -73,8 +74,7 @@ module.exports = (m, {isSnippet}) => {
             ),
             "",
             m(
-                "a",
-                {
+                "a", {
                     href: "https://github.com/nitanmarcel/memocho",
                     target: "blank",
                     rel: "noopener"
