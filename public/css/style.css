@@ -168,6 +168,10 @@ footer {
     margin: 0 0.5em;
 }
 
+.footer-text a:hover {
+   color: #e52a57;
+}
+
 .footer-keybindings {
     margin-right: auto;
     color: #EEE;
@@ -177,9 +181,12 @@ footer {
    color: #8abeb7;
 }
 
-
 .shortcut-text {
     color: #AAA;
+}
+
+.shortcut-text:hover {
+    color: #e52a57;
 }
 
 .submit:active {
