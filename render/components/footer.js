@@ -8,7 +8,7 @@ module.exports = (m, {
                     href: "/"
                 },
                 [
-                    "New Snippet", m("span.keyboard-shortcut", [": Ctrl + Alt + A"])
+                    m("code.shortcut-text", ["New Snippet"]), m("span.keyboard-shortcut", [": Ctrl + Alt + A"])
                 ],
             ),
             "  ",
@@ -21,8 +21,8 @@ module.exports = (m, {
                     form: "codeSnippet",
                 },
                 isSnippet ?
-                ["Fork", m("span.keyboard-shortcut", [": Ctrl + Alt + F"])] :
-                ["Save", m("span.keyboard-shortcut", [": Ctrl + S"])],
+                [m("code.shortcut-text", ["Fork"]), m("span.keyboard-shortcut", [": Ctrl + Alt + F"])] :
+                [m("code.shortcut-text", ["Save"]), m("span.keyboard-shortcut", [": Ctrl + S"])],
             ),
             isSnippet ?
             ["  ",
@@ -31,19 +31,13 @@ module.exports = (m, {
                         href: "?raw=true"
                     },
                     [
-                        "Raw", m("span.keyboard-shortcut", [": Ctrl + Alt + R"])
+                        m("code.shortcut-text", ["Raw"]), m("span.keyboard-shortcut", [": Ctrl + Alt + R"])
                     ],
                 ),
             ] :
             [""],
             " "
         ),
-        m("a#name-label", {
-            href: "https://github.com/nitanmmarcel/memocho",
-            target: "blank",
-            rel: "noopener"
-        }, " Memochō"),
-
         m("code.footer-text", [
             " Built by",
             m(
@@ -61,8 +55,16 @@ module.exports = (m, {
                     target: "blank",
                     rel: "noopener"
                 },
-                "@SitiSchu"
+                "@SitiSchu,"
             ),
+	    m(
+		"a", {
+			href: "https://github.com/nitanmarcel",
+			target: "blank",
+			rel: "noopener"
+		     },
+		     "@nitanmarcel"
+      	     ),
             "",
             m(
                 "a", {

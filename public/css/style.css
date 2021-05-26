@@ -173,6 +173,15 @@ footer {
     color: #EEE;
 }
 
+.keyboard-shortcut {
+   color: #8abeb7;
+}
+
+
+.shortcut-text {
+    color: #AAA;
+}
+
 .submit:active {
     background: #e52a5773;
 }
@@ -205,6 +214,10 @@ footer {
 
     .keyboard-shortcut {
         display: none;
+    }
+
+    .shortcut-text {
+	color: #8abeb7;
     }
 
     .submit {
