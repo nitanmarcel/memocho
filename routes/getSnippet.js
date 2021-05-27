@@ -7,8 +7,8 @@ module.exports = (req, res) => {
         isHash
     } = req;
     const [query, language] = (isHash ? req.params.hash : req.params.id || '').split('.');
-    const rawMode = req.query.raw != null;
-    const shortURL = req.query.short != null
+    const rawMode = req.query.raw != null || req.query.r != null;
+    const shortURL = req.query.short != null || req.query.s != null;
     return (isHash ? models.snippets.findOne({
             hash: query
         }) : models.snippets.findById(query))
